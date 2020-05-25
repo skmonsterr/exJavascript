@@ -8,6 +8,6 @@ Exercícíos JavaScript
 
 # TO DOM
 
-![Screenshot](getSelector.png)
+![Screenshot](assets/getSelector.png)
 
 ### TO DO
