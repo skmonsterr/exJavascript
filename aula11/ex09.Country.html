@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fronteira Brasil</title>
+  </head>
+  <body>
+    <h1>Sistema de Imigração</h1>
+    Digite sua origem :
+    <input type="text" name="txtOrigem" id="txtOrigem" />
+    <input type="button" value="Verificar" onclick="testarOrigem()" />
+    <div id="res"></div>
+
+    <script>
+      function testarOrigem() {
+        var txtO = document.querySelector("input#txtOrigem");
+        var res = document.querySelector("div#res");
+        var origem = String(txtO.value);
+        res.innerHTML = `<p>Sua origem é :<strong> ${origem}</strong>.<br/></p>`;
+        if (origem === "Brasileiro") {
+          res.innerHTML += `<p>Você pode entrar no Brasil, pois você é ${origem}</p><br/>
+            <p><h2>Bem-Vindo ao BRASIL</h2></p>`;
+        } else {
+          res.innerHTML += `<p>No Brasil, você é <strong>Estrangeiro</strong></p><br/>
+          <p>Sentimos muito, você não pode entrar</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>
